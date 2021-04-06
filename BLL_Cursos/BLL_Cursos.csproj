@@ -5,4 +5,8 @@
     <RootNamespace>BLL</RootNamespace>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\DAL_Cursos\DAL_Cursos.csproj" />
+  </ItemGroup>
+
 </Project>

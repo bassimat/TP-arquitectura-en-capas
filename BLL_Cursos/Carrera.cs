@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BLL
 {
-    class Carrera
+    public class Carrera
     {
         private string _nombre;
         private string _coordinador;
@@ -15,6 +15,12 @@ namespace BLL
         public Carrera( string nombre )
         {
             this._nombre = nombre;
+            // HACK: Quitar este hardcoding cuando lea la carrera del BD.
+            if( nombre == "Software")
+            {
+                this._duracionEnCuatris = 6;
+                this.Coordinador = "Hugo Aparicio";
+            }
         }
 
         public string Nombre

@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30002.166
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_Cursos", "UI_Cursos\UI_Cursos.csproj", "{E62E2430-E34E-41A0-AD24-245D7BDC89D0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BLL_Cursos", "BLL_Cursos\BLL_Cursos.csproj", "{29817DA2-5735-414F-B81B-E37EA041C468}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BLL_Cursos", "BLL_Cursos\BLL_Cursos.csproj", "{29817DA2-5735-414F-B81B-E37EA041C468}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_Cursos", "DAL_Cursos\DAL_Cursos.csproj", "{65B87C66-10F4-4B78-AEFF-8E21564BB1C7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAL_Cursos", "DAL_Cursos\DAL_Cursos.csproj", "{8301B001-CFFB-43E6-88FB-2221F9DE393F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{29817DA2-5735-414F-B81B-E37EA041C468}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{29817DA2-5735-414F-B81B-E37EA041C468}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{29817DA2-5735-414F-B81B-E37EA041C468}.Release|Any CPU.Build.0 = Release|Any CPU
-		{65B87C66-10F4-4B78-AEFF-8E21564BB1C7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{65B87C66-10F4-4B78-AEFF-8E21564BB1C7}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{65B87C66-10F4-4B78-AEFF-8E21564BB1C7}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{65B87C66-10F4-4B78-AEFF-8E21564BB1C7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8301B001-CFFB-43E6-88FB-2221F9DE393F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8301B001-CFFB-43E6-88FB-2221F9DE393F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8301B001-CFFB-43E6-88FB-2221F9DE393F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8301B001-CFFB-43E6-88FB-2221F9DE393F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
