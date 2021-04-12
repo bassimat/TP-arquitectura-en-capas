@@ -4,7 +4,7 @@ using System.Text;
 
 namespace BLL
 {
-    public class Carrera
+    public class Carrera : Entity
     {
         private string _nombre;
         private string _coordinador;
@@ -13,14 +13,9 @@ namespace BLL
 
 
         public Carrera( string nombre )
+            : base( nombre )
         {
             this._nombre = nombre;
-            // HACK: Quitar este hardcoding cuando lea la carrera del BD.
-            if( nombre == "Software")
-            {
-                this._duracionEnCuatris = 6;
-                this.Coordinador = "Hugo Aparicio";
-            }
         }
 
         public string Nombre
@@ -47,6 +42,21 @@ namespace BLL
         public bool AgregarMateria( Materia nuevaMateria )
         {
             return this._materias.Add( nuevaMateria );
+        }
+
+        public static List<Carrera> ObtenerCarreras()
+        {
+            List<Carrera> carreras = new List<Carrera>();
+
+            foreach (DAL.Carrera unaCarreraDAL in DAL.Carrera.ObtenerCarrerasDB())
+            {
+                Carrera objCarreraBLL = new Carrera( unaCarreraDAL.Nombre );
+                objCarreraBLL.Coordinador = unaCarreraDAL.Coordinador;
+                objCarreraBLL.CantidadDeCuatrimestres = unaCarreraDAL.Cuatrimestres;
+                objCarreraBLL._id = unaCarreraDAL.ID;
+                carreras.Add( objCarreraBLL );
+            }
+            return carreras;
         }
     }
 }

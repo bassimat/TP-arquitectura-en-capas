@@ -21,7 +21,7 @@ namespace UI_Cursos
         {
             BLL.Materia objMateria = new BLL.Materia( this.tBoxMateria.Text );
 
-            if (!objMateria.SetMomentoDeLaCarrera(new BLL.Carrera(this.tBoxCarrera.Text), 
+            if (!objMateria.SetMomentoDeLaCarrera((BLL.Carrera)this.cBoxCarrera.SelectedItem, 
                                                   Convert.ToInt32(this.tBoxAnio.Text),
                                                   Convert.ToInt32(this.tBoxCuatri.Text)) )
             {
@@ -41,5 +41,19 @@ namespace UI_Cursos
             //this.dgvMaterias.DataSource = objMateria.ObtenerReporte();
             this.dgvMaterias.DataSource = BLL.Materia.ObtenerReporte();
         }
+
+        private void cBoxCarrera_DropDown(object sender, EventArgs e)
+        {
+            this.cBoxCarrera.DataSource = BLL.Carrera.ObtenerCarreras();
+            this.cBoxCarrera.DisplayMember = "Nombre";
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            this.btnRecargar_Click(this, e);
+            this.cBoxCarrera_DropDown(this, e);
+            return;
+        }
     }
 }
+

@@ -5,7 +5,7 @@ using System.Data;
 
 namespace BLL
 {
-    public class Materia
+    public class Materia : Entity
     {
         private string _nombre;
         private Carrera _carrera;
@@ -13,7 +13,8 @@ namespace BLL
 
         
 
-        public Materia( string nombre )
+        public Materia( string nombre)
+            : base(nombre)
         {
             this._nombre = nombre;
         }
@@ -77,14 +78,8 @@ namespace BLL
 
         public bool Persistir()
         {
-            int id = 0;
             DAL.Materia dbMateriaDAL = new DAL.Materia();
-
-            // HACK: obtener Carrera desde la base de datos para conocer su ID.
-            if( this.Carrera.Nombre == "Software" ) 
-                id = 1;
-
-            return dbMateriaDAL.Alta(this.Nombre, id, this._sumaCuatris);
+            return dbMateriaDAL.Alta(this.Nombre, this.Carrera._id, this._sumaCuatris);
         }
 
 
