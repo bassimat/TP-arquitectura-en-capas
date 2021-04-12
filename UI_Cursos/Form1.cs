@@ -34,5 +34,12 @@ namespace UI_Cursos
             else
                 MessageBox.Show("No se pudo agregar la materia", "Error de datos");
         }
+
+        private void btnRecargar_Click(object sender, EventArgs e)
+        {
+            //BLL.Materia objMateria = new BLL.Materia();
+            //this.dgvMaterias.DataSource = objMateria.ObtenerReporte();
+            this.dgvMaterias.DataSource = BLL.Materia.ObtenerReporte();
+        }
     }
 }

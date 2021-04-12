@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Data;
 
 namespace BLL
 {
@@ -63,7 +64,6 @@ namespace BLL
             return true;
         }
 
-
         public int Anio
         {
             get { return (this._sumaCuatris + 1) / 2; }
@@ -85,6 +85,12 @@ namespace BLL
                 id = 1;
 
             return dbMateriaDAL.Alta(this.Nombre, id, this._sumaCuatris);
+        }
+
+
+        public static DataTable ObtenerReporte()
+        {
+            return (new DAL.Materia()).Reporte();
         }
     }
 }
